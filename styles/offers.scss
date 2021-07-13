@@ -1,0 +1,126 @@
+.offers-wrapper {
+	width: 100%;
+	position: relative;
+	.title {
+		margin-bottom: $gap;
+		width: 100%;
+		text-align: center;
+		font-weight: bold;
+	}
+	.underline {
+		margin: auto;
+		margin-bottom: 3rem;
+	}
+	.offers {
+		max-width: $max-width;
+		margin: 0 auto;
+		display: flex;
+		min-height: 100vh;
+		justify-content: center;
+		align-items: center;
+		.offer,
+		.offer-special {
+			width: 300px;
+			min-height: 500px;
+			border-radius: 15px;
+			box-shadow: 0px 0px 25px rgba($color: $primary, $alpha: 0.1);
+			background-color: white;
+			padding: $gap 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			margin: $gap;
+			.offer-title {
+				text-align: center;
+				font-size: $regular;
+				font-weight: bold;
+				margin: $gap 0;
+			}
+			.price {
+				font-size: $small;
+				color: $primary;
+				margin-bottom: 1rem;
+			}
+			.list {
+				width: 100%;
+				padding: 0.8rem 0;
+				text-align: center;
+				position: relative;
+				.active {
+					position: absolute;
+					left: -25%;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+				.disabled-text,
+				.active-text {
+					font-size: $tiny;
+				}
+				.disabled-text {
+					color: $gray;
+				}
+				&:before {
+					content: "";
+					display: block;
+					width: 60%;
+					height: 1px;
+					background-color: rgba($color: $gray, $alpha: 0.3);
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+			}
+
+			.button {
+				margin-top: 1.5rem;
+			}
+		}
+		.offer-special {
+			transform: translateY(-7%);
+			background-color: $primary;
+			.offer-title {
+				color: $background;
+			}
+			.price {
+				color: $secondary;
+			}
+			.list {
+				.active {
+					color: $background;
+				}
+				.disabled-text,
+				.active-text {
+					color: $background;
+				}
+				.special {
+					path {
+						color: rgba($color: $background, $alpha: 0.3);
+					}
+				}
+				.disabled-text {
+					color: rgba($color: $background, $alpha: 0.3);
+				}
+				&:before {
+					background-color: rgba($color: $background, $alpha: 0.3);
+				}
+			}
+			.button {
+				background-color: white;
+				color: $primary;
+				font-weight: bold;
+			}
+		}
+	}
+}
+@media screen and (max-width: $medium-screen) {
+	.offers-wrapper {
+		.offers {
+			flex-direction: column;
+			.offer-special {
+				transform: translateY(0);
+			}
+		}
+	}
+}
