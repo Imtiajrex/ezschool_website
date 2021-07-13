@@ -17,6 +17,9 @@ $tiny: 1rem;
 	outline: none;
 	border: none;
 }
+body {
+	overflow-x: hidden;
+}
 a {
 	text-decoration: none;
 	color: $primary;
