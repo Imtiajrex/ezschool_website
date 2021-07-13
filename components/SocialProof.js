@@ -41,6 +41,7 @@ export default function SocialProof() {
 					</div>
 				</div>
 			</div>
+			<button className="button">TRY FOR FREE</button>
 		</div>
 	);
 }
