@@ -1,0 +1,92 @@
+.hero-wrapper {
+	width: 100%;
+	position: relative;
+
+	.blob-top {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -99;
+	}
+	.blob-bottom {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		z-index: -99;
+	}
+	@media screen and (max-width: $medium-screen) {
+		.blob-top,
+		.blob-bottom {
+			width: 275px;
+		}
+	}
+	@media screen and (max-width: $small-screen) {
+		.blob-top,
+		.blob-bottom {
+			width: 180px;
+		}
+	}
+	.hero {
+		width: 100%;
+		max-width: $max-width;
+		margin: 0 auto;
+		.logo-container {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding-top: $gap;
+			img {
+				width: 50px;
+				height: 75px;
+			}
+		}
+		.value {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			.header {
+				font-size: $large;
+				mix-blend-mode: hard-light;
+				color: $secondary;
+				font-weight: bold;
+				margin: $gap auto;
+				width: 100%;
+				text-align: center;
+			}
+			.sub-header {
+				font-size: $small;
+				width: 50%;
+				margin: 0.5rem auto;
+				font-weight: normal;
+				color: $gray;
+				text-align: center;
+				line-height: 170%;
+			}
+			.button {
+				margin: $gap 0;
+				font-size: $small;
+				width: 220px;
+			}
+			.illustration {
+				width: 350px;
+			}
+			@media screen and (max-width: $medium-screen) {
+				.header {
+					font-size: $big;
+				}
+				.sub-header {
+					width: 100%;
+					padding: 0 $gap;
+					mix-blend-mode: screen;
+				}
+			}
+			@media screen and (max-width: $tiny-screen) {
+				.illustration {
+					width: 250px;
+				}
+			}
+		}
+	}
+}
