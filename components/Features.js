@@ -17,7 +17,7 @@ export default function Features() {
 			<div className="features">
 				<div className="title large">FEATURES</div>
 				<div className="underline" />
-				<Marquee speed={100} pauseOnClick pauseOnHover>
+				{/* <Marquee speed={100} pauseOnClick pauseOnHover gradientWidth={50}>
 					<Feature Icon={IoSchool} name="Students Portal" />
 					<Feature Icon={FaChalkboardTeacher} name="Teachers Portal" />
 					<Feature Icon={HiLibrary} name="Library Portal" />
@@ -28,7 +28,8 @@ export default function Features() {
 					<Feature Icon={IoNotifications} name="Notification System" />
 					<Feature Icon={MdWeb} name="Web Portal" />
 					<Feature Icon={FaUsers} name="User Portal" />
-				</Marquee>
+				</Marquee> */}
+				<button className="button">TRY FOR FREE</button>
 			</div>
 		</div>
 	);
@@ -43,17 +44,19 @@ function BG() {
 
 	return (
 		<div className="bg">
-			{[...Array(20).keys()].map((el) => (
-				<div
-					className="circle"
-					style={{
-						top: `${randomNum()}%`,
-						left: `${randomNum("left")}%`,
-						transform: `scale(${randomNum()}%)`,
-					}}
-					key={el}
-				/>
-			))}
+			<div className="bg-container">
+				{[...Array(20).keys()].map((el) => (
+					<div
+						className="circle"
+						style={{
+							top: `${randomNum()}%`,
+							left: `${randomNum("left")}%`,
+							transform: `scale(${randomNum()}%)`,
+						}}
+						key={el}
+					/>
+				))}
+			</div>
 		</div>
 	);
 }
