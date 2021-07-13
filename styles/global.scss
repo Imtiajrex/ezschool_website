@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Rambla:wght@400;700&display=swap");
+$max-width: 1100px;
+$medium-screen: 900px;
+$small-screen: 600px;
+$tiny-screen: 400px;
+$gap: 1.5rem;
+$large: 3.75rem;
+$big: 2.188rem;
+$regular: 1.56rem;
+$small: 1.125rem;
+$tiny: 1rem;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Rambla", sans-serif;
+	outline: none;
+	border: none;
+}
+a {
+	text-decoration: none;
+	color: $primary;
+}
+.button {
+	padding: 0.75rem 1.5rem;
+	text-transform: uppercase;
+	background-color: $primary;
+	color: $background;
+	transform: scale(1);
+	transition: 0.1s ease-in-out;
+	border-radius: 50px;
+	cursor: pointer;
+	&:hover {
+		transform: scale(1.05);
+	}
+	&:active {
+		transform: scale(0.95);
+	}
+}
+
+.large {
+	font-size: $large;
+}
+.regular {
+	font-size: $regular;
+}
+@media screen and (max-width: $medium-screen) {
+	.large {
+		font-size: $big;
+	}
+	.regular {
+		font-size: $small;
+	}
+}
