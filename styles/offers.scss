@@ -33,14 +33,15 @@
 			margin: $gap;
 			.offer-title {
 				text-align: center;
-				font-size: $regular;
 				font-weight: bold;
+				font-size: $small;
 				margin: $gap 0;
 			}
 			.price {
-				font-size: $small;
 				color: $primary;
 				margin-bottom: 1rem;
+				font-weight: bold;
+				font-size: $regular;
 			}
 			.list {
 				width: 100%;
@@ -84,7 +85,7 @@
 				color: $background;
 			}
 			.price {
-				color: $secondary;
+				color: $background;
 			}
 			.list {
 				.active {
@@ -110,6 +111,7 @@
 				background-color: white;
 				color: $primary;
 				font-weight: bold;
+				font-size: $regular;
 			}
 		}
 	}
