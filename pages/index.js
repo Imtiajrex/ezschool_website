@@ -12,6 +12,12 @@ export default function Home() {
 		<>
 			<Head>
 				<title>EZschool - A School Management Application</title>
+				<link
+					rel="icon"
+					href="/images/logo.png"
+					sizes="16x16"
+					type="image/png"
+				/>
 			</Head>
 			<Hero />
 			<SocialProof />
