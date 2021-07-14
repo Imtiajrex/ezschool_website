@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Marquee from "react-fast-marquee";
 import { IoSchool, IoNotifications } from "react-icons/io5";
 import {
@@ -13,8 +14,8 @@ import { IconContext } from "react-icons/lib";
 export default function Features() {
 	return (
 		<div className="features-wrapper">
-			<BG />
 			<div className="features">
+				<img src="/images/circle-bg.svg" alt="bg" className="bg" />
 				<div className="title large">FEATURES</div>
 				<div className="underline" />
 				<Marquee speed={100} pauseOnClick pauseOnHover gradientWidth={50}>
@@ -30,32 +31,6 @@ export default function Features() {
 					<Feature Icon={FaUsers} name="User Portal" />
 				</Marquee>
 				<button className="button">TRY FOR FREE</button>
-			</div>
-		</div>
-	);
-}
-function BG() {
-	function randomNum(type) {
-		let num = Math.floor(Math.random() * 100);
-		if (type != "left")
-			while (num > 50 && num < 85) num = Math.floor(Math.random() * 100);
-		return num;
-	}
-
-	return (
-		<div className="bg">
-			<div className="bg-container">
-				{[...Array(20).keys()].map((el) => (
-					<div
-						className="circle"
-						style={{
-							top: `${randomNum()}%`,
-							left: `${randomNum("left")}%`,
-							transform: `scale(${randomNum()}%)`,
-						}}
-						key={el}
-					/>
-				))}
 			</div>
 		</div>
 	);

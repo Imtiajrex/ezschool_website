@@ -2,7 +2,7 @@
 export default function About() {
 	return (
 		<div className="about">
-			<div className="title">ABOUT US</div>
+			<div className="title large">ABOUT US</div>
 			<div className="underline" />
 			<div className="details">
 				<div className="image">
