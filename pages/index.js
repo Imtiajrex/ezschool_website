@@ -5,6 +5,7 @@ import Offers from "@components/Offers";
 import SocialProof from "@components/SocialProof";
 import Footer from "@components/Footer";
 import Head from "next/head";
+import Modal from "@components/Modal";
 
 export default function Home() {
 	return (
@@ -18,6 +19,7 @@ export default function Home() {
 			<Offers />
 			<About />
 			<Footer />
+			<Modal />
 		</>
 	);
 }

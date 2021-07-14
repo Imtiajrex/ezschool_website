@@ -1,5 +1,9 @@
+import { useContext } from "react";
+import { ModalContext } from "./ModalContext";
+
 /* eslint-disable @next/next/no-img-element */
 export default function Hero() {
+	const modal = useContext(ModalContext);
 	return (
 		<div className="hero-wrapper">
 			<img src="/images/blob-top.svg" alt="hero bg" className="blob-top" />
@@ -19,7 +23,9 @@ export default function Hero() {
 						Students,Teachers,Library we’ve got everything covered. Whatever is
 						best for your school we’ve got it.
 					</p>
-					<button className="button">TRY FOR FREE</button>
+					<button className="button" onClick={() => modal.setOpen(true)}>
+						TRY FOR FREE
+					</button>
 					<img
 						src="/images/hero_illustration.svg"
 						alt="Hero Illustration"

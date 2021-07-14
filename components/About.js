@@ -1,5 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
+import { useContext } from "react";
+import { ModalContext } from "./ModalContext";
+
 export default function About() {
+	const modal = useContext(ModalContext);
 	return (
 		<div className="about">
 			<div className="title large">ABOUT US</div>
@@ -26,7 +30,9 @@ export default function About() {
 						<br />
 						From the team of ezschool.
 					</div>
-					<button className="button">TRY FOR FREE</button>
+					<button className="button" onClick={() => modal.setOpen(true)}>
+						TRY FOR FREE
+					</button>
 				</div>
 			</div>
 		</div>

@@ -1,6 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import Marquee from "react-fast-marquee";
 import { IoSchool, IoNotifications } from "react-icons/io5";
+import { useContext } from "react";
+import { ModalContext } from "./ModalContext";
+
 import {
 	FaChalkboardTeacher,
 	FaCashRegister,
@@ -12,6 +15,7 @@ import { HiLibrary } from "react-icons/hi";
 import { MdWeb } from "react-icons/md";
 import { IconContext } from "react-icons/lib";
 export default function Features() {
+	const modal = useContext(ModalContext);
 	return (
 		<div className="features-wrapper">
 			<div className="features">
@@ -30,7 +34,9 @@ export default function Features() {
 					<Feature Icon={MdWeb} name="Web Portal" />
 					<Feature Icon={FaUsers} name="User Portal" />
 				</Marquee>
-				<button className="button">TRY FOR FREE</button>
+				<button className="button" onClick={() => modal.setOpen(true)}>
+					TRY FOR FREE
+				</button>
 			</div>
 		</div>
 	);

@@ -1,4 +1,8 @@
+import { useContext } from "react";
+import { ModalContext } from "./ModalContext";
+
 export default function SocialProof() {
+	const modal = useContext(ModalContext);
 	return (
 		<div className="social-proof">
 			<div className="title large">What People Are Saying!</div>
@@ -41,7 +45,9 @@ export default function SocialProof() {
 					</div>
 				</div>
 			</div>
-			<button className="button">TRY FOR FREE</button>
+			<button className="button" onClick={() => modal.setOpen(true)}>
+				TRY FOR FREE
+			</button>
 		</div>
 	);
 }
