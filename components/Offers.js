@@ -1,4 +1,6 @@
 import { FaCheckCircle } from "react-icons/fa";
+import { useContext } from "react";
+import { ModalContext } from "./ModalContext";
 
 const regularList = [
 	{ text: "150 Students" },
@@ -47,6 +49,7 @@ export default function Offers() {
 	);
 }
 function Offer({ title, price, lists }) {
+	const modal = useContext(ModalContext);
 	return (
 		<div className={title == "STANDARD" ? "offer-special" : "offer"}>
 			<div className="offer-title">{title}</div>
@@ -66,7 +69,15 @@ function Offer({ title, price, lists }) {
 					</div>
 				))}
 			</div>
-			<button className="button">GET NOW</button>
+			<button
+				className="button"
+				onClick={() => {
+					modal.setOpen(true);
+					modal.setPackage(title);
+				}}
+			>
+				GET NOW
+			</button>
 		</div>
 	);
 }
